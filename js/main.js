@@ -1,6 +1,7 @@
-let gameBoard;
-let PLAYERONE = 'O';
-let PLAYERTWO = 'X';
+//set variables
+var gameBoard;
+const PLAYERONE = 'O';
+const PLAYERTWO = 'X';
 
 const winnerPlay = [
     [0, 4, 8],
@@ -13,15 +14,24 @@ const winnerPlay = [
     [2, 5, 8]
   ];
 
-const cells = document.getElementsByClassName('cell');
-onStartGame();
+const cells = document.querySelectorAll('.cell');
+startGame();
 
-function onStartGame(){
-    document.querySelector('.end-game').style.display = 'none';
+function startGame() {
+    // document.querySelector(".endgame").style.display = "none";
     gameBoard = Array.from(Array(9).keys());
-    for(let i=0; i< cells.length; i++) {
-        cells[i].innerText = '';
-        cells[i].style.removeProperty('background-color');
-        cells[i].addEventListener('click', onTurnClick, false)
-      }
-    };
+    for (var i = 0; i < cells.length; i++) {
+      cells [i].innerText = '';
+      //otherwise remove the background color because the cell is not in play
+      cells[i].style.removeProperty('background-color');
+      cells[i].addEventListener('click', turnClick, false)
+    }
+}
+function turnClick(square) {
+  turnClick(square.target.id, PLAYERONE)
+}
+
+function turn(squareId, player) {
+  gameBoard[squareId] = player;
+  document.getElementById(squareId).innerText = player;
+}
