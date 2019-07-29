@@ -3,6 +3,7 @@ var gameBoard;
 const playerOne = 'O';
 const playerTwo = 'X';
 
+//identify winning combinations with variable winnerPlay
 const winnerPlay = [
     [0, 4, 8],
     [2, 4, 6],
@@ -14,6 +15,7 @@ const winnerPlay = [
     [2, 5, 8]
   ];
 
+//define the cells and start game variable
 const cells = document.querySelectorAll('.cell');
 startGame();
 
