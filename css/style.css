@@ -65,3 +65,17 @@ table {
     border-left: 10px solid #9E9E9E;
     font-size: 2em;
   }
+  /* .endgame: {
+    display: none;
+    padding: 30px;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    box-sizing: border-box;
+    margin-top: 15px;
+    background-color: #333;
+    color: #fff;
+    border: 0;
+    border-left: 10px solid #9E9E9E;
+    font-size: 2em;
+  } */

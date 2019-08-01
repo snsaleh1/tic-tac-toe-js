@@ -69,7 +69,7 @@ function gameOver(gameWinner) {
 
 function declareWinner(who) {
   document.querySelector(".endgame").display = "block";
-  document.querySelector("endgame. text").innerText = who;
+  document.querySelector(".endgame").innerText = who;
 }
 
 function emptySquares() {
